@@ -11,6 +11,9 @@
       %p.nothing_here_message This groups has no projects yet
     - projects.each do |project|
       %li.project-row
+        - if project.gitlab_ci?
+          %div.ci
+            = image_tag project.gitlab_ci_service.status_img_path, alt: "build status"
         = link_to project_path(project), class: dom_class(project) do
           %span.project-name
             = truncate(project.name, length: 25)

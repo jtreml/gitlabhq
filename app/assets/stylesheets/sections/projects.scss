@@ -81,6 +81,24 @@ ul.nav.nav-projects-tabs {
 
 .my-projects {
   li {
+    .ci {
+      height: 10px;
+      width: 10px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 5px;
+      vertical-align: middle;
+      margin-bottom: 3px;
+      display: inline-block;
+      img {
+        min-height: 250px;
+        min-width: 500px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
     .project-title {
       font-size: 14px;
     }
@@ -108,10 +126,33 @@ ul.nav.nav-projects-tabs {
   top: -5px;
 }
 
-.public-projects .repo-info {
-  color: #777;
-
-  a {
+.public-projects {
+  .repo-info {
     color: #777;
+
+    a {
+      color: #777;
+    }
+  }
+
+  li {
+    .ci {
+      height: 10px;
+      width: 10px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 5px;
+      vertical-align: middle;
+      margin-top: 4px;
+      margin-right: 4px;
+      float: left;
+      img {
+        min-height: 250px;
+        min-width: 500px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
   }
 }

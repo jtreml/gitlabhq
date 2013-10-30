@@ -68,6 +68,24 @@
 .project-row, .group-row {
   padding: 10px 15px !important;
 
+  .ci {
+    height: 10px;
+    width: 10px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    display: inline-block;
+    img {
+      min-height: 250px;
+      min-width: 500px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
   .namespace-name {
     color: #666;
     font-weight: bold;

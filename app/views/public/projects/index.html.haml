@@ -16,6 +16,9 @@
   %ul.bordered-list.top-list
     - @projects.each do |project|
       %li
+        - if project.gitlab_ci?
+          %div.ci
+            = image_tag project.gitlab_ci_service.status_img_path, alt: "build status"
         %h4
           = link_to project_path(project) do
             = project.name_with_namespace

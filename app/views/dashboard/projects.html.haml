@@ -61,6 +61,9 @@
                 = public_icon
               - else
                 = private_icon
+            - if project.gitlab_ci?
+              %div.ci
+                = image_tag project.gitlab_ci_service.status_img_path, alt: "build status"
             = link_to project_path(project), class: dom_class(project) do
               %strong= project.name_with_namespace
 
